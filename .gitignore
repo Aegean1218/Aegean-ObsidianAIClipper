@@ -1,0 +1,32 @@
+# Local Obsidian plugin data
+data.json
+.obsidian/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# User vault content
+00_收件箱/
+01_网站/
+02_文章/
+03_Git/
+20_知识专题/
+30_可复用资产/
+80_外部目录/
+90_系统资料/附件/
+Attachments/
+Inbox/
+
+# System files
+.DS_Store
+__MACOSX/
+
+# Logs and temp files
+*.log
+tmp/
+temp/
