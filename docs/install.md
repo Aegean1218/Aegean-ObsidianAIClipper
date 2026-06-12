@@ -5,6 +5,24 @@
 - Obsidian 插件：负责接收网页内容，并写入当前笔记库。
 - 浏览器插件：负责从网页、公众号、GitHub 或截图中提取内容。
 
+## 可选：让 AI Agent 辅助安装
+
+如果你使用 Codex、Claude Code 或 OpenClaw，可以把项目中的这个目录复制到对应工具的 skills 目录：
+
+```text
+skills/aegean-obsidian-ai-clipper-installer
+```
+
+然后对 AI Agent 说：
+
+```text
+请使用 aegean-obsidian-ai-clipper-installer 帮我安装 Aegean剪藏助手。
+```
+
+这个 skill 会指导 AI Agent 从 GitHub 下载最新项目，把 Obsidian 插件安装到你指定的 Obsidian 笔记库，并把浏览器插件准备到下载目录。
+
+注意：浏览器插件不能被 AI Agent 静默安装。你仍需要在 Chrome 或 Edge 的扩展管理页中手动选择“加载已解压的扩展程序”。
+
 ## 第一步：安装 Obsidian 插件
 
 1. 打开你的 Obsidian 笔记库文件夹。
