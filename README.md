@@ -24,6 +24,9 @@ Aegean剪藏助手是一套面向 Obsidian 用户的本地网页剪藏工具。�
 ├── docs/
 │   ├── install.md                      # 安装说明
 │   └── feature-guide.md                # 功能说明
+├── skills/
+│   └── aegean-obsidian-ai-clipper-installer/
+│       └── SKILL.md                    # 给 Codex / Claude Code / OpenClaw 使用的安装技能
 ├── README.md
 ├── RELEASE_NOTES.md
 ├── PRIVACY.md
@@ -34,6 +37,22 @@ Aegean剪藏助手是一套面向 Obsidian 用户的本地网页剪藏工具。�
 ```
 
 ## 安装方式
+
+### AI Agent 辅助安装
+
+如果你正在使用 Codex、Claude Code 或 OpenClaw，可以把下面这个目录复制到对应工具的 skills 目录中：
+
+```text
+skills/aegean-obsidian-ai-clipper-installer
+```
+
+然后对 AI Agent 说：
+
+```text
+请使用 aegean-obsidian-ai-clipper-installer 帮我安装 Aegean剪藏助手。
+```
+
+它会从公开 GitHub 仓库下载最新版本，把 Obsidian 插件安装到你指定的 Obsidian 笔记库，并把浏览器扩展准备到下载目录。浏览器扩展仍需要你在 Chrome 或 Edge 的扩展管理页中手动点击“加载已解压的扩展程序”，这是浏览器的安全限制。
 
 ### 1. 安装 Obsidian 插件
 
