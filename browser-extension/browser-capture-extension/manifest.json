@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Obsidian 收藏助手",
+  "version": "0.2.2",
+  "description": "把网页正文、公众号、GitHub 项目或截图直接存进 Obsidian 收件箱。",
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://mmbiz.qpic.cn/*",
+    "https://*.qpic.cn/*",
+    "https://*.qq.com/*"
+  ],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Obsidian 收藏助手",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  }
+}

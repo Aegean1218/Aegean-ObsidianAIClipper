@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obsidian 收藏助手</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel" aria-label="收藏到 Obsidian">
+        <header class="panel-header">
+          <div class="brand-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 4.75h10a1.25 1.25 0 0 1 1.25 1.25v13.25l-6.25-4-6.25 4V6A1.25 1.25 0 0 1 7 4.75Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h1>收藏到 Obsidian</h1>
+        </header>
+
+        <div class="actions">
+          <button id="saveGithub" class="capture-action github" type="button">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M15 21v-3.7c.05-.65-.13-1.27-.52-1.82 3.05-.34 6.25-1.5 6.25-6.75a5.3 5.3 0 0 0-1.4-3.68 4.9 4.9 0 0 0-.08-3.62s-1.14-.36-3.73 1.4a12.9 12.9 0 0 0-6.79 0C6.14 1.07 5 1.43 5 1.43a4.9 4.9 0 0 0-.08 3.62 5.3 5.3 0 0 0-1.4 3.72c0 5.2 3.2 6.36 6.24 6.74A3.2 3.2 0 0 0 9 17.55V21" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9 18c-3.1 1.1-3.1-1.55-4.4-1.9" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="action-copy">
+              <span class="action-title">GitHub 项目</span>
+              <span class="action-subtitle">仓库概览 · README · Stars</span>
+            </span>
+            <span class="action-chevron" aria-hidden="true"></span>
+          </button>
+
+          <button id="saveWechat" class="capture-action wechat" type="button">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M4 7.75A2.75 2.75 0 0 1 6.75 5h10.5A2.75 2.75 0 0 1 20 7.75v8.5A2.75 2.75 0 0 1 17.25 19H6.75A2.75 2.75 0 0 1 4 16.25v-8.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="m5 7 7 5.2L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+            <span class="action-copy">
+              <span class="action-title">公众号文章</span>
+              <span class="action-subtitle">全文 · 图片 · 作者信息</span>
+            </span>
+            <span class="action-chevron" aria-hidden="true"></span>
+          </button>
+
+          <button id="saveScreenshot" class="capture-action screenshot" type="button">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M5.75 4.75h12.5A1.75 1.75 0 0 1 20 6.5v11a1.75 1.75 0 0 1-1.75 1.75H5.75A1.75 1.75 0 0 1 4 17.5v-11a1.75 1.75 0 0 1 1.75-1.75Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="m5 16 4.5-4.5 3.1 3.1 1.9-1.9L19 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M15.75 8.25h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="action-copy">
+              <span class="action-title">截图</span>
+              <span class="action-subtitle">当前页面可视区域</span>
+            </span>
+            <span class="action-chevron" aria-hidden="true"></span>
+          </button>
+
+          <button id="saveText" class="capture-action text" type="button">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M7 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M7 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <path d="M7 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </span>
+            <span class="action-copy">
+              <span class="action-title">正文</span>
+              <span class="action-subtitle">纯文本 · 去除样式标签</span>
+            </span>
+            <span class="action-chevron" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <section class="connection-settings" aria-label="Obsidian 连接状态">
+          <div class="connection-card">
+            <span class="connection-dot" aria-hidden="true"></span>
+            <div class="connection-copy">
+              <p id="connectionTitle" class="connection-title">正在检测 Obsidian</p>
+              <p id="connectionHelp" class="connection-help">请先打开 Obsidian，并启用 Aegean剪藏助手。</p>
+            </div>
+            <button id="checkConnection" class="link-button" type="button">重新检测</button>
+          </div>
+
+          <details class="advanced-settings">
+            <summary>高级设置</summary>
+            <p class="advanced-hint">一般不用修改。只有你改过 Obsidian 插件端口时才需要调整。</p>
+            <label class="server-label" for="serverUrl">接收地址</label>
+            <div class="server-row">
+              <input id="serverUrl" class="server-input" type="url" spellcheck="false" />
+              <button id="saveServer" class="server-button" type="button">保存</button>
+            </div>
+          </details>
+        </section>
+
+        <footer class="status-bar">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p id="status" class="status" aria-live="polite">准备就绪</p>
+        </footer>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+  </html>
