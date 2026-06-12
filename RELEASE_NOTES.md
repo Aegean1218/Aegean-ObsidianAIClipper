@@ -8,6 +8,7 @@
 - Obsidian 插件使用说明：`obsidian-plugin/README-obsidian-plugin.md`
 - 安装说明：`docs/install.md`
 - 功能说明书：`docs/feature-guide.md`
+- AI Agent 安装技能：`skills/aegean-obsidian-ai-clipper-installer`
 - 开源 README：`README.md`
 - 许可证：`LICENSE`
 - 隐私说明：`PRIVACY.md`
@@ -26,6 +27,7 @@
 - 发布包内部说明文件名使用 ASCII，降低跨平台解压后文件名乱码的风险。
 - 补齐开源发布文件：完整中文 README、MIT License、隐私说明、安全说明和 `.gitignore`。
 - 补充开源审计说明，记录本次未发现个人路径、真实密钥、本地配置或 vault 内容。
+- 新增 `aegean-obsidian-ai-clipper-installer` skill，方便 Codex、Claude Code、OpenClaw 按说明从 GitHub 下载并安装插件。
 
 ## 默认整理目录
 
