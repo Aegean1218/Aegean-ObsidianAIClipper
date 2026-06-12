@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aegean ObsidianAIClipper 安装器"
+  short_description: "下载安装到 Aegean 剪藏助手的 Obsidian 插件和浏览器扩展。"
+  default_prompt: "请使用这个技能下载安装到 Aegean ObsidianAIClipper。"
